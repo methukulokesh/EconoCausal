@@ -10,6 +10,7 @@
 - Generated `requirements.txt`.
 - Created the initial project folder structure.
 - Documented the project overview and planned workflow.
+- Created and tested `src/environment_check.py` and pushed it to GitHub.
 
 ### Issues
 - No installation errors observed during library verification.
