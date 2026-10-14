@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter files
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Local datasets
+data/raw/*
+data/processed/*
+
+# Generated outputs
+outputs/
