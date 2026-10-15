@@ -1,0 +1,61 @@
+Dataset shape: (73100, 10)
+
+Date range: 2022-01-01 00:00:00 to 2024-01-01 00:00:00
+
+Missing values:
+Date               0
+Store ID           0
+Product ID         0
+Category           0
+Region             0
+Inventory Level    0
+Units Sold         0
+Units Ordered      0
+Demand Forecast    0
+Price              0
+
+Duplicate rows: 0
+
+Category distribution:
+Category
+Furniture      14699
+Toys           14643
+Clothing       14626
+Groceries      14611
+Electronics    14521
+
+Sales summary:
+count    73100.000000
+mean       136.464870
+std        108.919406
+min          0.000000
+25%         49.000000
+50%        107.000000
+75%        203.000000
+max        499.000000
+
+Price summary:
+count    73100.000000
+mean        55.135108
+std         26.021945
+min         10.000000
+25%         32.650000
+50%         55.050000
+75%         77.860000
+max        100.000000
+
+Average price by category:
+Category
+Clothing       54.89
+Electronics    55.31
+Furniture      55.18
+Groceries      55.27
+Toys           55.03
+
+Average units sold by category:
+Category
+Clothing       136.69
+Electronics    135.01
+Furniture      137.77
+Groceries      136.92
+Toys           135.93
