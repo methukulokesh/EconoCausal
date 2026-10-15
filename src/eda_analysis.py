@@ -1,5 +1,6 @@
 
 import pandas as pd
+import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Load dataset
@@ -32,3 +33,38 @@ report_path.write_text("\n\n".join(report), encoding="utf-8")
 
 print("EDA report saved to:", report_path)
 print("EDA analysis completed successfully!")
+# Create visualizations
+figures_dir = output_dir / "figures"
+figures_dir.mkdir(parents=True, exist_ok=True)
+
+# 1. Price distribution
+plt.figure(figsize=(8, 5))
+plt.hist(df["Price"], bins=30, edgecolor="black")
+plt.title("Price Distribution")
+plt.xlabel("Price")
+plt.ylabel("Frequency")
+plt.tight_layout()
+plt.savefig(figures_dir / "price_distribution.png")
+plt.close()
+
+# 2. Average price by category
+df.groupby("Category")["Price"].mean().plot(kind="bar")
+plt.title("Average Price by Category")
+plt.xlabel("Category")
+plt.ylabel("Average Price")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig(figures_dir / "average_price_by_category.png")
+plt.close()
+
+# 3. Average units sold by category
+df.groupby("Category")["Units Sold"].mean().plot(kind="bar")
+plt.title("Average Units Sold by Category")
+plt.xlabel("Category")
+plt.ylabel("Average Units Sold")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig(figures_dir / "average_units_sold_by_category.png")
+plt.close()
+
+print("Charts saved to:", figures_dir)
