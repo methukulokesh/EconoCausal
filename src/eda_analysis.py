@@ -68,3 +68,20 @@ plt.savefig(figures_dir / "average_units_sold_by_category.png")
 plt.close()
 
 print("Charts saved to:", figures_dir)
+
+# 4. Price vs Units Sold analysis
+correlation = df["Price"].corr(df["Units Sold"])
+
+print("\nPrice vs Units Sold Analysis")
+print(f"Correlation: {correlation:.4f}")
+
+plt.figure(figsize=(8, 5))
+plt.scatter(df["Price"], df["Units Sold"], alpha=0.4)
+plt.title("Price vs Units Sold")
+plt.xlabel("Price")
+plt.ylabel("Units Sold")
+plt.tight_layout()
+plt.savefig(figures_dir / "price_vs_units_sold.png")
+plt.close()
+
+print("Price vs sales chart saved successfully.")
