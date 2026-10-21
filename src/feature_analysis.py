@@ -48,3 +48,18 @@ if "Discount" in df.columns:
     )["Units Sold"].agg(["count", "mean"]).round(2))
 
 print("\nFeature analysis completed.")
+print("\n=== CAUSAL ANALYSIS READINESS ===")
+
+print("\nMissing values:")
+print(df.isnull().sum().to_string())
+
+print("\nDuplicate rows:", df.duplicated().sum())
+
+print("\nNumeric correlations with Units Sold:")
+print(
+    df.select_dtypes(include="number")
+    .corr(numeric_only=True)["Units Sold"]
+    .sort_values(ascending=False)
+    .round(3)
+    .to_string()
+)

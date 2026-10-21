@@ -33,6 +33,5 @@ print(df.describe().round(2).to_string())
 print("\n===== DATA VALIDATION =====")
 for col in ["Price", "Units Sold", "Discount", "Competitor Pricing"]:
     if col in df.columns:
-        print(f"{col}: minimum={df[col].min()}, maximum={df[col].max()}")
-
+                    print(col + ": minimum=" + str(df[col].min()) + ", maximum=" + str(df[col].max()))
 print("\nDataset validation completed.")
