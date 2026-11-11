@@ -58,3 +58,15 @@ The estimated effect will depend on the validity of the identification assumptio
 3. Implement DML using defensible controls.
 4. Evaluate uncertainty and model robustness.
 5. Report findings with assumptions and limitations.
+
+## 9. Final Control Selection Status
+
+The control-variable set is not yet finalized.
+
+Before DML estimation:
+- Verify the dataset source and provenance.
+- Confirm that controls are measured before the pricing decision.
+- Exclude variables that may be affected by price.
+- Check whether sufficient price variation exists across observations.
+
+No final causal effect will be reported until these checks are justified.
